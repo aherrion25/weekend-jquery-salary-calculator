@@ -11,6 +11,8 @@ Create an application that records employee salaries and adds salaries up to rep
 - [x] create an submit button
 - [x] create click handler for submit button
 - [x] create a table for employees 
+- [x] create function for employee information
+- [] create fuction to display employee information to DOM
 - [] create a deletion button
 
 Your project description goes here. What problem did you solve? How did you solve it?

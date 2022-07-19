@@ -19,9 +19,9 @@
 
             <input type="text" placeholder="First Name" id="first-name">
             <input type="text" placeholder="Last Name" id="last-name">
-            <input type="text" placeholder="ID" id="idNumber">
+            <input type="text" placeholder="ID" id="id-number">
             <input type="text" placeholder="Job Title" id="job-title">
-            <input type="number" placeholder="Salary" id="salary">
+            <input type="number" placeholder="Salary" id="annual-salary">
             <button id="submit-Btn">Submit</button>
         </div>
         <div id="table-content">
@@ -36,7 +36,7 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody id="product-table">
+                <tbody id="employee-table">
                     <tr>
                         <td>first name</td>
                         <td>last name</td>
@@ -47,7 +47,8 @@
                     </tr>
                 </tbody>
             </table>
-            <h2>Total Monthly: $</h2>
+            <h2>Total Monthly: $<span id="total-monthly">TOTALMONTHLY
+            </span><h2>
         </div>
     </div>
 </body>
