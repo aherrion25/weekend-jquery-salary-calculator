@@ -8,6 +8,7 @@ function readyNow() {
     console.log('in readyNow');
     
     $('#submit-Btn').on('click', employeeSubmit);
+    $('body').on('click', '#delete-Btn',removeEmployee)
 
 } // End readyNow
 
@@ -40,4 +41,32 @@ function employeeSubmit() {
     $('#id-number').val('');
     $('#job-title').val('');
     $('#annual-salary').val('');
+
+    totalMonthly();
 } // End employeeSubmit
+
+function removeEmployee() {
+    console.log('in removeEmployee');
+    $(this).parent().parent().remove()
+} // End RemoveEmployee
+
+
+function totalMonthly(){
+    console.log('in totalMonthly');
+    const totalmonth = $('#total-monthly');
+    let total = 0;
+    for(let i = 0; i < employee.length; i++){
+        total += Number(employee[i].annualSalary);
+        if(total > 20000){
+            console.log('exceeded monthly total', total);
+            $('#total-monthly').css('background-color', 'red')
+        }
+    }
+    console.log('total monthly', total);
+
+    const monthlytotal = total
+    
+    totalmonth.empty();
+    totalmonth.append(monthlytotal)
+
+} // End monthly total
